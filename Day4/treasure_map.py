@@ -14,5 +14,7 @@ row = int(position[1]) # vai selecionar o segundo caracter e transformarlo em in
 select_row = map[row -1]
 select_row [column -1] = "X"
 
+#  map[row -1][column -1] = "X" # This also works as it shoud
+
 
 print(f"{row1}\n{row2}\n{row3}")
