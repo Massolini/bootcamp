@@ -8,4 +8,4 @@ random_choice = random.randint(0, numero_de_pessoas)
 
 print(random_choice) #mostra o numero da lista gerado
 
-print(f"O nome escolhido para pagar a conta é: {names[random_chosen]}")
+print(f"O nome escolhido para pagar a conta é: {names[random_choice]}")
