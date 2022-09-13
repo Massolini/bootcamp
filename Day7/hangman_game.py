@@ -1,6 +1,5 @@
 import random
-from hangman_art import logo
-from hangman_art import stages
+from hangman_art import logo, stages #separated from coma you can add the second import from the same file
 from hangman_words import word_list
 
 #word_list = ["ardvark", "baboon", "camel"]
