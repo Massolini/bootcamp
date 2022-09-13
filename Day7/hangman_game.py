@@ -35,8 +35,11 @@ elif play == "y":
     while not end_game:
         
         guess = input("\nGuess a letter: --> ").lower()
-    
-    #create a loop that substitut the word in the display for the word in the chosen_word
+
+        if guess in display:
+            print(f"The letter \"{guess}\" was already chosen, pick another one!")
+            
+        #create a loop that substitut the word in the display for the word in the chosen_word
         for position in range(chosen_word_len):
             letter = chosen_word[position]
             #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
@@ -60,8 +63,7 @@ elif play == "y":
                 print("End of lives, You lose")
                 end_game = True
             
-        if guess in chosen_word:
-            print(f"The letter \"{guess}\" is on word, pick another one!")
+        
         
             
                 
