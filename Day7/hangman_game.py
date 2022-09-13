@@ -1,7 +1,7 @@
 import random
 
 
-word_list = ["ardvark", "baboom", "camel"]
+word_list = ["ardvark", "baboon", "camel"]
 words_in_list = len(word_list) #shows how many words contains in the list
 random_word = random.randint(0, words_in_list -1) #chose one number from the quantity of words in the list -1 at the end because it goes from 0 to 2 and the total is +1 num
 chosen_word = word_list[random_word] # shows whitch word was chosen by the number randomly chosed hehehe
@@ -26,6 +26,7 @@ elif play == "y":
     print(f"{display}")
     
     end_game = False
+    lives = 5
     while not end_game:
         
         guess = input("\nGuess a letter: --> ").lower()
@@ -33,27 +34,27 @@ elif play == "y":
     #create a loop that substitut the word in the display for the word in the chosen_word
         for position in range(chosen_word_len):
             letter = chosen_word[position]
+            #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
             if letter == guess:
                 display[position] = letter
-                print(display)
+        print(display)
     
-                    
-            for letter in chosen_word_list:
-                if letter == guess:
-                    if display == chosen_word_list:
-                        end_game = True
+        if "_" not in display: #check if the game finish and user won and also end the While loop
+            end_game = True
+            print("You win")      
+        
+        
+        if guess not in chosen_word:
+            print(f"You guess wrong")
+            lives -= 1
+            print(f"Careful you have only {lives} lives left")
+            if lives == 0: 
+                print("End of lives, You lose")
+                end_game = True
             
-                else:
-                    #print("Wrong!")
+            
+        
+            
                 
-            
-        
-        
-        
-    
-         
-    
-    
-
 else:
-    print("Please type Y or N to begin")
+    print("Please type Y or N to begin otherwise the game does not start")
