@@ -21,7 +21,7 @@ play = input("Do you want to play Hangman? Type Y or N --> ").lower()
 if play == "n":
     print("Bye!")
 elif play == "y":
-    print("Welcome to Hangman game! you have 5 try\'s before the man\'s die!\n")
+    print("Welcome to Hangman game! you have 6 try\'s before the man\'s die!\n")
     print(stages[6])
     
     display = []
