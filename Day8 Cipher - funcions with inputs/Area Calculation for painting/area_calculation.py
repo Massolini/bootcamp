@@ -1,5 +1,10 @@
 #Write your code below this line 👇
-
+def paint_calc(height, width, cover):
+    import math
+    num_cans = ((test_h * test_w)/coverage)
+    num_cans_rounded = math.ceil((test_h * test_w)/coverage)
+    print(f"Total of paint you will need: {num_cans}")
+    print(f"Number of cans you have to buy to paint it all: {num_cans_rounded}")
 
 
 
